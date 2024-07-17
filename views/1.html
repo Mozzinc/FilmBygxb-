@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos - JMSite</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="/css/projetos.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar is-dark">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/">
+                    <strong>JMSite</strong>
+                </a>
+                <div class="navbar-burger" data-target="navbarMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="/">Home</a>
+                    <a class="navbar-item" href="/sobre">Sobre</a>
+                    <a class="navbar-item" href="/projetos">Projetos</a>
+                    <a class="navbar-item" href="/contato">Contato</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="section">
+        <div class="container">
+            <section class="section">
+                <h1 class="title has-text-centered">Nossos Projetos</h1>
+                <div class="columns is-multiline">
+                    <div class="column is-one-third">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="/img/projeto1.jpg" alt="Projeto 1">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content">
+                                        <p class="title is-4">Projeto 1</p>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    Descrição do Projeto 1.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-third">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="/img/projeto2.jpg" alt="Projeto 2">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content">
+                                        <p class="title is-4">Projeto 2</p>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    Descrição do Projeto 2.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Adicione mais projetos conforme necessário -->
+                </div>
+            </section>
+            <section class="section">
+                <h1 class="title has-text-centered">Depoimentos dos Clientes</h1>
+                <div class="columns is-multiline">
+                    <div class="column is-half">
+                        <div class="box">
+                            <p>"Depoimento do Cliente 1."</p>
+                            <p class="has-text-right"><strong>Cliente 1</strong></p>
+                        </div>
+                    </div>
+                    <div class="column is-half">
+                        <div class="box">
+                            <p>"Depoimento do Cliente 2."</p>
+                            <p class="has-text-right"><strong>Cliente 2</strong></p>
+                        </div>
+                    </div>
+                    <!-- Adicione mais depoimentos conforme necessário -->
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>&copy; 2024 JMSite. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

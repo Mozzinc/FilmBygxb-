@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - JMSite</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="/css/contato.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar is-dark">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/">
+                    <strong>JMSite</strong>
+                </a>
+                <div class="navbar-burger" data-target="navbarMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="/">Home</a>
+                    <a class="navbar-item" href="/sobre">Sobre</a>
+                    <a class="navbar-item" href="/projetos">Projetos</a>
+                    <a class="navbar-item" href="/contato">Contato</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="section">
+        <div class="container">
+            <section class="section">
+                <h1 class="title has-text-centered">Entre em Contato</h1>
+                <div class="columns is-centered">
+                    <div class="column is-half">
+                        <form id="contact-form" class="box">
+                            <div class="field">
+                                <label class="label" for="name">Nome Completo:</label>
+                                <div class="control">
+                                    <input class="input" type="text" id="name" name="name" required>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label" for="email">Email:</label>
+                                <div class="control">
+                                    <input class="input" type="email" id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label" for="phone">Telefone:</label>
+                                <div class="control">
+                                    <input class="input" type="tel" id="phone" name="phone" required pattern="\+55 \d{2} \d{5}-\d{4}">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label" for="message">Mensagem:</label>
+                                <div class="control">
+                                    <textarea class="textarea" id="message" name="message" required></textarea>
+                                </div>
+                            </div>
+                            <div class="field is-grouped">
+                                <div class="control">
+                                    <button type="submit" class="button is-link">Enviar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>&copy; 2024 JMSite. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

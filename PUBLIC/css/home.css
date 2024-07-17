@@ -1,0 +1,41 @@
+.home__page {
+    background-image: url(/img/background.png);
+    background-size: cover; /* Faz com que a imagem cubra toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    height: 90vh; /* Garante que o corpo ocupe 100% da altura da viewport */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove padding padrão */
+}
+
+.container__navegação {
+    display: flex;
+    align-items: center;
+    margin: 50px 150px;
+}
+
+.container__menu {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.container__menu__links {
+    list-style: none;
+    display: flex;
+    gap: 75px;
+}
+
+.container__menu__links a {
+    text-decoration: none;
+    color: white;
+}
+
+.container__menu__links:hover{
+    color: #ffcc00;
+}
+
+
+strong{
+    color: var(--cor__azul);
+}

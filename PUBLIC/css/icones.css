@@ -1,0 +1,43 @@
+.icon {
+    position: absolute;
+    bottom: 50px; /* Ajuste conforme necessário para a posição desejada */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 100px;
+}
+
+.icon i {
+    font-size: 50px; /* Define o tamanho dos ícones */
+    color: white; /* Muda a cor do ícone para branco */
+    margin-right: 20px; /* Adiciona margem à direita de cada ícone */
+    transition: color 0.3s; /* Adiciona uma transição suave */
+    gap: 100px;
+}
+
+/* Estilos específicos para cada ícone */
+.icon-whatsapp:hover i {
+    
+    color: #25D366; /* Cor do WhatsApp */
+}
+
+.icon-instagram:hover i {
+    color: #E4405F; /* Cor do Instagram */
+}
+
+.icon-linkedin:hover i {
+    color: #0077B5; /* Cor do LinkedIn */
+}
+
+.icon-github:hover i {
+    color: #77749b; /* Cor do GitHub */
+}
+
+.icon i:last-child {
+    margin-right: 0; /* Remove a margem direita do último ícone */
+}
+
+.icones__links {
+    display: flex;
+    gap: 100px; /* Ajuste conforme necessário */
+}
